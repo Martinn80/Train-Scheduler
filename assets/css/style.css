@@ -1,11 +1,63 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/maxresdefault.jpg) no-repeat center center fixed; 
+    background-size: cover;
+
+}
+
+.jumbotron {
+	background-color: silver;
+	opacity: 0.6;
+
+}
+
+.table {
+	color: white;
+}
+
 panel{
 	width: 100%;
 }
 
 h1 {
-    font-size: 50px;
+	font-size: 50px;
+	color: #0da7e4;
+}
+
+h3 {
+	color: black;
+	margin-bottom: 20px;
+}
+
+thead {
+	color: #0da7e4;
 }
 
 .panel-heading{
-	padding-top: 0.25%;
+	padding: 0.25%;
+}
+
+.panel-body {
+	color: #0da7e4;
+}
+
+#currentTrain {
+	float: left;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+#newTrain {
+	float: right;
+	margin-right: 20px;
+}
+
+#add-train {
+	color: #0da7e4;
+	background-color: gray;
+	
 }

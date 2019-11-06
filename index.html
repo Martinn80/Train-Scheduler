@@ -8,73 +8,77 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Train Scheduler</title>
+    <title>Train Scheduler Website</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron text-center bg-dark text-white">
+        <div class="jumbotron text-center bg-light text-dark">
             <h1>Bay Area Bullet Train</h1>
         </div>
 
         <!-- current train table -->
+        <div class="row" id="currentTrain">
+            <div class="panel panel-light text-light ">
+                <div class="panel-heading">
+                    <h3>Current Trains Running</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
 
-        <div class="panel panel-dark text-white">
-            <div class="panel-heading">
-                <h3>Current Trains Running</h3>
-            </div>
-            <div class="panel-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Train Name</th>
-                            <th>Destination</th>
-                            <th>Frequency(min)</th>
-                            <th>Next Arrival</th>
-                            <th>Minutes Away</th>
-                        </tr>
-                    </thead>
+                        <!-- add new train here -->
+                        <tbody id="add-row">
+                        </tbody>
 
-                    <!-- add new train here -->
-                    <tbody id="add-row">
-                    </tbody>
-
-                </table>
+                    </table>
+                </div>
             </div>
         </div>
 
+        <br>
         <!-- new train form -->
-        <div class="panel panel-dark text-dark">
-            <div class="panel-heading">
-                <h3>Add New Trains Below</h3>
-            </div>
+        <div class="row" id="newTrain">
+            <div class="panel panel-default panel-dark text-dark ">
+                <div class="panel-heading">
+                    <h3>Add New Trains Below</h3>
+                </div>
 
-            <hr>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="text">Train Name</label>
+                            <input type="text" class="form-control" id="train-name">
+                        </div>
 
-            <div class="panel-body">
-                <form>
-                    <div class="form-group">
-                        <label for="text">Train Name</label>
-                        <input type="text" class="form-control" id="train-name">
-                    </div>
+                        <div class="form-group">
+                            <label for="text">Destination</label>
+                            <input type="text" class="form-control" id="destination">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="text">Destination</label>
-                        <input type="text" class="form-control" id="destination">
-                    </div>
+                        <div class="form-group">
+                            <label for="text">First Train Time (HH:mm - Military Time)</label>
+                            <input type="text" class="form-control" id="first-train">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="text">First Train Time (HH:mm - Military Time)</label>
-                        <input type="text" class="form-control" id="first-train">
-                    </div>
+                        <div class="form-group">
+                            <label for="text">Frequency (min)</label>
+                            <input type="text" class="form-control" id="frequency">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="text">Frequency (min)</label>
-                        <input type="text" class="form-control" id="frequency">
-                    </div>
-
-                    <button type="submit" id="add-train" class="btn btn-dark">Submit</button>
-                </form>
+                        <button type="submit" id="add-train" class="btn btn-dark">
+                            <strong>Submit</strong>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
